@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3N9KBT5Q8V"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-3N9KBT5Q8V');
+  </script>
+  <!-- Theme Made By www.w3schools.com -->
+  <title> Venkata Sai Uppu - Profile</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    body {
+      font: 400 15px Lato, sans-serif;
+      line-height: 1.8;
+      color: #818181;
+    }
+    h2 {
+      font-size: 24px;
+      text-transform: uppercase;
+      color: #303030;
+      font-weight: 600;
+      margin-bottom: 30px;
+    }
+    h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      color: #303030;
+      font-weight: 400;
+      margin-bottom: 30px;
+    }
+    .jumbotron {
+      background-color: #f4511e;
+      color: #fff;
+      padding: 100px 25px;
+      font-family: Montserrat, sans-serif;
+    }
+    .container-fluid {
+      padding: 60px 50px;
+    }
+    .bg-grey {
+      background-color: #f6f6f6;
+    }
+    .logo-small {
+      color: #f4511e;
+      font-size: 50px;
+    }
+    .logo {
+      color: #f4511e;
+      font-size: 200px;
+    }
+    .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+    }
+    .thumbnail img {
+      width: 100%;
+      height: 100%;
+      margin-bottom: 10px;
+    }
+    .carousel-control.right, .carousel-control.left {
+      background-image: none;
+      color: #f4511e;
+    }
+    .carousel-indicators li {
+      border-color: #f4511e;
+    }
+    .carousel-indicators li.active {
+      background-color: #f4511e;
+    }
+    .item h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      font-weight: 400;
+      font-style: italic;
+      margin: 70px 0;
+    }
+    .item span {
+      font-style: normal;
+    }
+    .panel {
+      border: 1px solid #f4511e;
+      border-radius: 0 !important;
+      transition: box-shadow 0.5s;
+    }
+    .panel:hover {
+      box-shadow: 5px 0px 40px rgba(0, 0, 0, .2);
+    }
+    .panel-footer .btn:hover {
+      border: 1px solid #f4511e;
+      background-color: #fff !important;
+      color: #f4511e;
+    }
+    .panel-heading {
+      color: #fff !important;
+      background-color: #f4511e !important;
+      padding: 25px;
+      border-bottom: 1px solid transparent;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+    }
+    .panel-footer {
+      background-color: white !important;
+    }
+    .panel-footer h3 {
+      font-size: 32px;
+    }
+    .panel-footer h4 {
+      color: #aaa;
+      font-size: 14px;
+    }
+    .panel-footer .btn {
+      margin: 15px 0;
+      background-color: #f4511e;
+      color: #fff;
+    }
+    .navbar {
+      margin-bottom: 0;
+      background-color: #f4511e;
+      z-index: 9999;
+      border: 0;
+      font-size: 12px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+      font-family: Montserrat, sans-serif;
+    }
+    .navbar li a, .navbar .navbar-brand {
+      color: #fff !important;
+    }
+    .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: #f4511e !important;
+      background-color: #fff !important;
+    }
+    .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+    }
+    footer .glyphicon {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #f4511e;
+    }
+    .slideanim { visibility:hidden; }
+    .slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;
+      animation-duration: 1s;
+      -webkit-animation-duration: 1s;
+      visibility: visible;
+    }
+    @keyframes slide {
+      0% {
+        opacity: 0;
+        transform: translateY(70%);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0%);
+      }
+    }
+    @-webkit-keyframes slide {
+      0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+      }
+      100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+      }
+    }
+    @media screen and (max-width: 768px) {
+      .col-sm-4 {
+        text-align: center;
+        margin: 25px 0;
+      }
+      .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+      }
+    }
+    @media screen and (max-width: 480px) {
+      .logo {
+        font-size: 150px;
+      }
+    }
+    .header-img {
+      width: 20%; /* Adjust the width as needed */
+      height: 20%; /* Maintain aspect ratio */
+    }
+  </style>
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#myPage">Venkata Sai Uppu</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#siemens">TARGETED COMPANY</a></li>
+          <li><a href="#education">EDUCATION </a></li>
+          <li><a href="#experience">EXPERIENCE</a></li>
+          <li><a href="#skills">SKILLS</a></li>
+          <li><a href="#projects">PROJECTS</a></li>
+          <li><a href="#certifications">CERTIFICATIONS</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="jumbotron text-center">
+    <img src="https://github.com/chowdarysai333/chowdarysai333.github.io/raw/main/images/head.jpg" alt="Venkata Sai Uppu" class="header-img">
+    <h1>Venkata Sai Uppu</h1>
+    <p>Data Analytic Engineer | Web and Application Developer</p>
+    <p>Passionate about working on user responsive AI applications.</p>
+  </div>
+
+  <!-- Container (About Section) -->
+  <div id="about" class="container-fluid">
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2">
+        <h2>About Me</h2>
+        <p>Welcome to my profile! I am Venkata Sai Uppu, a dedicated software engineer with a profound passion for web development. My journey into the world of programming commenced during my college days, and since then, I've been on a continuous quest for knowledge and skill enhancement.</p>
+      <p>I specialize in creating innovative and user-centric web applications that not only address real-world challenges but also provide an exceptional user experience. My fascination with the intricate details of web development has led me to explore cutting-edge technologies and frameworks, enabling me to stay at the forefront of industry trends.</p>
+      <p>Driven by my enthusiasm for clean and efficient code, I spend my free time working on personal projects, delving into emerging technologies, and actively contributing to open-source communities. I firmly believe in the collaborative power of diverse teams and thrive in dynamic environments.</p>
+
+      </div>
+    </div>
+  </div>
+  <div id="external-content" class="container-fluid">
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2">
+        <!-- Link to redirect to the course HTML page -->
+        <a href="https://github.com/chowdarysai333/chowdarysai333.github.io/blob/main/waph.html">Click here to visit the WAPH Course page</a>
+      </div>
+    </div>
+  </div>
+  <div id="siemens" class="container-fluid bg-grey">
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2">
+        <h2>Siemens Corporation - Full Stack Web Application Developer</h2>
+        <h3>Qualifications</h3>
+        <ul>
+          <li>Required Knowledge/Skills, Education, and Experience</li>
+          <ul>
+            <li>Master of Science degree in Computer Science or equivalent degree</li>
+            <li>1+ years' experience in software development</li>
+            <li>Excellent communication and customer interaction skills</li>
+            <li>Ability to lead groups in discussions (in person or remote)</li>
+          </ul>
+          <li>Technical Skills</li>
+          <ul>
+            <li>HTML5, Javascript, CSS</li>
+            <li>REACT, AngularJS, Bootstrap</li>
+            <li>Charting libraries (Chart.js, Highcharts, etc...)</li>
+            <li>Business process diagramming (BPMN.io / bpmn-js)</li>
+            <li>Java development / Tomcat</li>
+            <li>Database persistence frameworks (i.e. MyBatis)</li>
+            <li>SQL for relational databases (MySQL or equivalent)</li>
+            <li>Git for source code management</li>
+            <li>Eclipse, Visual Studio Code</li>
+            <li>Jerse, JSON, REST</li>
+          </ul>
+
+        </ul>
+        <h3>My Eligibility</h3>
+        <ul>
+         <li>I am a highly skilled and results-driven Full Stack Web Application Developer with a diverse skill set encompassing programming languages such as Python, C++, C#, JavaScript, HTML, CSS, and XML. My proficiency extends to web front-end development, where I've gained valuable experience in creating engaging and user-friendly interfaces.</li>
+        <li>Having successfully completed my Master of Science in Information Technology with a focus on Cybersecurity, Web Application Development, and Web Interaction at the University of Cincinnati, I bring a robust educational background to complement my practical expertise.</li>
+        <li>My technical projects, including "Bridge Identification using Remote Sensing" and "Bridge Crack Identification Utilizing Horse Herd Optimization ALG," have been published in reputable journals (Springer and IEEE), showcasing my dedication to impactful research and development.</li>
+        <li>Alongside my academic achievements, I have gained hands-on experience in the industry, particularly during my Technical Support Internship at Blue Prism in March 2022. There, I innovated in technical automation using RPA technology, resolving challenges related to employee pay slip generation and contributing to software automation troubleshooting and security management.</li>
+        <li>As a Fresher Employee at Mind Tree, Bengaluru, India, starting in April 2023, I underwent comprehensive training in full-stack development, with a strong emphasis on the front end of application development. I actively contributed to various tasks, including innovative design creation and the development of a 3D login page with a focus on social reform.</li>
+        <li>My proficiency in software support, technical writing, and database management further enhances my eligibility for the Full Stack Web Application Developer position at Siemens Corporation.</li>
+        <li>Explore more about my technical skills, education, and projects in the sections below, and I am confident that my passion for web development and user interaction design align seamlessly with Siemens Corporation's goals and requirements.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Container (Education Section) -->
+  <div id="education" class="container-fluid bg-grey">
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2">
+        <h2>Education</h2>
+        <h4>Master of Science in Information Technology</h4>
+        <p>University of Cincinnati, Cincinnati, Ohio (2023 - 2024)</p>
+        <p>GPA: 4.00</p>
+        <h4>Bachelor of Technology in Electronics and Communication Engineering</h4>
+        <p>V R SIDDHARTHA ENGINEERING COLLEGE, India (2019 - 2023)</p>
+        <p>GPA: 3.58</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Container (Experience Section) -->
+  <div id="experience" class="container-fluid">
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2">
+        <h2>Experience</h2>
+        <h4>Technical Support, Intern - Blue Prism, India (March 2022)</h4>
+        <p>Innovated in technical automation creation with the RPA technology for employee play slip generation. Excelled collaboratively with team to resolve pay slip generation through automation over manual employee generation. Gained first-hand knowledge of software automation troubleshooting and security management.</p>
+        <h4>Fresher Employee - Mind Tree, Bengaluru, India (April 2023)</h4>
+        <p>Trained as a fresher for 2 months over full-stack development, highly on the front end of application development on the user interface and user experience. Managed a variety of tasks during the initial fresher role, including innovative design creation and 3D login page creation with social reform.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Container (Skills Section) -->
+  <div id="skills" class="container-fluid bg-grey">
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2">
+        <h2>Skills</h2>
+        <h4>Programming Languages</h4>
+        <p>Python, C++, C#, JavaScript, HTML, CSS, XML</p>
+        <h4>Web Development</h4>
+        <p>Web front-end development experience</p>
+        <h4>Software</h4>
+        <p>RPA (Blue Prism), Microsoft Office (including Access, Word, Excel, PowerPoint)</p>
+        <h4>Networking</h4>
+        <p>Knowledgeable with computer networking concepts and functionality; database management</p>
+        <h4>Support</h4>
+        <p>Experience with technical writing and technical support</p>
+        <h4>Operating Systems</h4>
+        <p>Windows (All), Ubuntu OS (limited)</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Container (Projects Section) -->
+  <div id="projects" class="container-fluid">
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2">
+        <h2>Technical Projects</h2>
+        <h4>Bridge Identification using Remote Sensing (2022)</h4>
+        <p>Used YOLO V3 for building a model for the identification of bridges in different locations from satellite images. Focused on transportation and navigation applications. Published in Springer publication.</p>
+        <h4>Bridge Crack Identification Utilizing Horse Herd Optimization ALG (2023)</h4>
+        <p>Implemented the newly developed Horse Herd Optimization Algorithm in crack detection techniques. It improved accuracy by 97.4 percent. The outcome is to improve results. Published in IEEE.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Container (Certifications Section) -->
+  <div id="certifications" class="container-fluid bg-grey">
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2">
+        <h2>Certifications and Workshops</h2>
+        <h4>AWS Academy Graduate and AWS Cloud Associate Developer (AWS)</h4>
+        <p>Fulfilled a 30-day AWS Workshop organized under the state development council, concentrating on community services.</p>
+        <h4>JAVA J2EE Certification (Wipro)</h4>
+        <p>Completed JAVA J2EE Certification from Wipro.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Container (Contact Section) -->
+  <div id="contact" class="container-fluid">
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2">
+        <h2>Contact</h2>
+        <p>Feel free to reach out to me if you have any questions or would like to discuss potential opportunities.</p>
+        <p><span class="glyphicon glyphicon-map-marker"></span> Cincinnati, Ohio, United States</p>
+        <p><span class="glyphicon glyphicon-phone"></span> +1(513)-410-8634</p>
+        <p><span class="glyphicon glyphicon-envelope"></span> uppuvi@mail.uc.edu</p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="container-fluid text-center">
+    <a href="#myPage" title="To Top">
+      <span class="glyphicon glyphicon-chevron-up"></span>
+    </a>
+    <p>Bootstrap Theme Made By <a href="https://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a></p>
+  </footer>
+
+  <script>
+    $(document).ready(function () {
+      // Add smooth scrolling to all links in the navbar + footer link
+      $(".navbar a, footer a[href='#myPage']").on('click', function (event) {
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+
+          // Store hash
+          var hash = this.hash;
+
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 900, function () {
+
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        } // End if
+      });
+
+      $(window).scroll(function () {
+        $(".slideanim").each(function () {
+          var pos = $(this).offset().top;
+
+          var winTop = $(window).scrollTop();
+          if (pos < winTop + 600) {
+            $(this).addClass("slide");
+          }
+        });
+      });
+    })
+  </script>
+
+</body>
+</html>
