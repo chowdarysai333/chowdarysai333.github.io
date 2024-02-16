@@ -1,6 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <title>Welcome Page</title>
+  <script>
+    function setWelcomeCookie() {
+      const currentDate = new Date();
+      const lastVisit = document.cookie.replace(/(?:(?:^|.*;\s*)lastVisit\s*=\s*([^;]*).*$)|^.*$/, "$1");
+      
+      if (!lastVisit) {
+        // First-time visit
+        alert("Welcome to my homepage!");
+      } else {
+        // Revisit
+        alert("Welcome back! Your last visit was: " + lastVisit);
+      }
+
+      // Set/update the lastVisit cookie with the current date/time
+      document.cookie = `lastVisit=${currentDate.toUTCString()}`;
+    }
+  </script>
+
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-3N9KBT5Q8V"></script>
   <script>
@@ -19,6 +38,16 @@
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Include jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  <!-- Include React and ReactDOM -->
+  <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+  <!-- Include Babel for JSX compilation (development version) -->
+  <script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <style>
     body {
       font: 400 15px Lato, sans-serif;
@@ -201,10 +230,62 @@
       width: 20%; /* Adjust the width as needed */
       height: 20%; /* Maintain aspect ratio */
     }
+    #email, #date {
+      cursor: pointer;
+      color: blue;
+      text-decoration: underline;
+    }
+     {
+      font: 400 15px Lato, sans-serif;
+      line-height: 1.8;
+      color: #818181;
+      background-color: #f6f6f6;
+    }
+    .jumbotron {
+      background-color: #3498db;
+      color: #fff;
+      padding: 100px 25px;
+      font-family: Montserrat, sans-serif;
+    }
+    .container-fluid {
+      padding: 60px 50px;
+    }
+    #joke-container {
+      margin-top: 20px;
+    }
+     {
+      font: 400 15px Lato, sans-serif;
+      line-height: 1.8;
+      color: #818181;
+      background-color: #f6f6f6;
+    }
+    .jumbotron {
+      background-color: #3498db;
+      color: #fff;
+      padding: 100px 25px;
+      font-family: Montserrat, sans-serif;
+    }
+    .container-fluid {
+      padding: 60px 50px;
+    }
+    #weather-container {
+      margin-top: 20px;
+    }
   </style>
 </head>
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+  <!-- Call setWelcomeCookie function on page load -->
+  
+  <h1>Welcome to My Homepage!</h1>
+  <p>This is a sample webpage.</p>
+
+  <!-- Call setWelcomeCookie function on page load -->
+  <script>
+    setWelcomeCookie();
+  </script>
+
 
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -237,6 +318,57 @@
     <p>Data Analytic Engineer | Web and Application Developer</p>
     <p>Passionate about working on user responsive AI applications.</p>
   </div>
+  <div id="email" onclick="showhideEmail()">Show my email</div>
+  <script type="text/javascript" src="email.js"></script>
+  <div id="digit-clock"></div>
+                <script>
+                    function displayTime(){
+                        document.getElementById('digit-clock').innerHTML="Current time: "+new Date();
+                    }
+                        setInterval(displayTime, 500);
+                </script>
+  <canvas id="analog-clock" width="150" height="150" style="background-color: #999"></canvas>
+
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+  <script>
+    $(document).ready(function(){
+        var canvas = $("#analog-clock")[0];
+        var ctx = canvas.getContext("2d");
+        var radius = canvas.height / 2;
+        ctx.translate(radius, radius);
+        radius = radius * 0.90;
+
+        setInterval(drawClock, 1000);
+
+        function drawClock() {
+            drawFace(ctx, radius);
+            drawNumbers(ctx, radius);
+            drawTime(ctx, radius);
+        }
+    });
+  </script>
+
+  <!-- Include the React component for Contact Details -->
+  <div id="contact-details"></div>
+  <script type="text/babel">
+    class ContactDetails extends React.Component {
+      render() {
+        return (
+          <div>
+            <p>Contact Number: +1(513)-410-8634</p>
+            <p>Email: uppuvi@mail.uc.edu</p>
+          </div>
+        );
+      }
+    }
+
+    ReactDOM.render(<ContactDetails />, document.getElementById('contact-details'));
+  </script>
+
+  <!-- Other content and footer... -->
+
+  <div id="date" onclick="document.getElementById('date').innerHTML = Date()">Click here to show Date()</div>
 
   <!-- Container (About Section) -->
   <div id="about" class="container-fluid">
@@ -254,10 +386,135 @@
     <div class="row">
       <div class="col-sm-8 col-sm-offset-2">
         <!-- Link to redirect to the course HTML page -->
-        <a href="https://github.com/chowdarysai333/chowdarysai333.github.io/blob/main/waph.html">Click here to visit the WAPH Course page</a>
+	<h3>Web Appplication Programming And Hacking</h3>
+        <a href="https://chowdarysai333.github.io/waph.html">Click here to visit the WAPH Course page</a>
       </div>
     </div>
   </div>
+  <div class="container bio-container">
+    <h2>Short Bio</h2>
+    <div class="panel panel-default">
+      <div class="panel-heading">My Story with UC</div>
+      <div class="panel-body">
+        <p> I am an MSIT student at UC and am interested in web development,
+interaction design, and responsive user satisfaction. I would like to concentrate
+on full-stack development in this semester to improve my skills and coding
+knowledge to build real-time applications. I was excited to learn about this
+course and work together to build the team projects.</p>
+      </div>
+    </div>
+  </div>
+  <div class="jumbotron text-center">
+    <h1>Enjoy a Joke Every Minute!</h1>
+  </div>
+
+  <!-- Content Section -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2">
+
+        <!-- Joke Container -->
+        <div id="joke-container" class="well">
+          <p>Loading joke...</p>
+        </div>
+
+        <!-- Include Bootstrap JS -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+        <!-- JokeAPI Script -->
+        <script>
+          function fetchJoke() {
+            $.get("https://v2.jokeapi.dev/joke/Any", function (data) {
+              if (data.type === "twopart") {
+                $("#joke-container").html(`<p><strong>${data.setup}</strong></p><p>${data.delivery}</p>`);
+              } else {
+                $("#joke-container").html(`<p>${data.joke}</p>`);
+              }
+            });
+          }
+
+          // Initial fetch
+          fetchJoke();
+
+          // Fetch a new joke every 1 minute
+          setInterval(fetchJoke, 60000);
+        </script>
+
+      </div>
+    </div>
+  </div><div class="jumbotron text-center">
+    <h1>Weather Information</h1>
+  </div>
+
+  <!-- Content Section -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2">
+
+        <!-- Weather Container -->
+        <div id="weather-container" class="well">
+          <i class="fas fa-sun weather-icons"></i>
+          <canvas id="weather-chart" width="400" height="200"></canvas>
+          <p>Loading weather information...</p>
+        </div>
+
+        <!-- Include Bootstrap JS -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+        <!-- Weatherbit API Script -->
+        <script>
+          // Replace 'YOUR_API_KEY' with your Weatherbit API key
+          const apiKey = '5c6361a7317d4c38971f1c2ddcf09e3e';
+          const apiUrl = `https://api.weatherbit.io/v2.0/current?lat=35.7721&lon=-78.63861&key=${apiKey}&units=I`;
+
+          function fetchWeather() {
+            $.get(apiUrl, function (data) {
+              const temperature = data.data[0].temp;
+              const weatherDescription = data.data[0].weather.description;
+
+              // Display temperature and description
+              $("#weather-container").html(`<i class="fas fa-thermometer-half weather-icons"></i> ${temperature}°F<br><i class="fas fa-cloud weather-icons"></i> ${weatherDescription}`);
+
+              // Create a simple bar chart
+              const ctx = $("#weather-chart")[0].getContext("2d");
+              new Chart(ctx, {
+                type: 'bar',
+                data: {
+                  labels: ['Temperature'],
+                  datasets: [{
+                    label: 'Temperature',
+                    data: [temperature],
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                  }]
+                },
+                options: {
+                  scales: {
+                    y: {
+                      beginAtZero: true
+                    }
+                  }
+                }
+              });
+            })
+            .fail(function() {
+              // Handle API request failure
+              $("#weather-container").html("<p>Failed to fetch weather information.</p>");
+            });
+          }
+
+          // Initial fetch
+          fetchWeather();
+
+          // Fetch weather information every 5 minutes
+          setInterval(fetchWeather, 300000);
+        </script>
+
+      </div>
+    </div>
+  </div>
+
   <div id="siemens" class="container-fluid bg-grey">
     <div class="row">
       <div class="col-sm-8 col-sm-offset-2">
@@ -431,6 +688,23 @@
       });
     })
   </script>
+  <title>Welcome Page</title>
+  <script>
+    function setWelcomeCookie() {
+      const currentDate = new Date();
+      const lastVisit = document.cookie.replace(/(?:(?:^|.*;\s*)lastVisit\s*=\s*([^;]*).*$)|^.*$/, "$1");
+      
+      if (!lastVisit) {
+        // First-time visit
+        alert("Welcome to my homepage!");
+      } else {
+        // Revisit
+        alert("Welcome back! Your last visit was: " + lastVisit);
+      }
 
+      // Set/update the lastVisit cookie with the current date/time
+      document.cookie = `lastVisit=${currentDate.toUTCString()}`;
+    }
+  </script>
 </body>
 </html>
