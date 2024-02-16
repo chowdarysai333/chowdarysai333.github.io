@@ -516,6 +516,59 @@ course and work together to build the team projects.</p>
       </div>
     </div>
   </div>
+  <h1>Weather Information for Cincinnati</h1>
+
+  <div>
+    <canvas id="weather-chart" width="400" height="200"></canvas>
+  </div>
+
+  <script>
+    const apiKey = '5c6361a7317d4c38971f1c2ddcf09e3e'; // Replace with your actual API key
+    const apiUrl = `https://api.weatherbit.io/v2.0/current?city=Cincinnati&key=${apiKey}&units=I`;
+
+    function fetchWeather() {
+      $.get(apiUrl, function (data) {
+        const temperature = data.data[0].temp;
+        const weatherDescription = data.data[0].weather.description;
+
+        // Display temperature and description
+        console.log(`Temperature: ${temperature}°F, Weather: ${weatherDescription}`);
+
+        // Create a simple bar chart
+        const ctx = $("#weather-chart")[0].getContext("2d");
+        new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: ['Temperature'],
+            datasets: [{
+              label: 'Temperature',
+              data: [temperature],
+              backgroundColor: 'rgba(75, 192, 192, 0.2)',
+              borderColor: 'rgba(75, 192, 192, 1)',
+              borderWidth: 1
+            }]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+      })
+      .fail(function() {
+        // Handle API request failure
+        console.error("Failed to fetch weather information.");
+      });
+    }
+
+    // Initial fetch
+    fetchWeather();
+
+    // Fetch weather information every 5 minutes
+    setInterval(fetchWeather, 300000);
+  </script>	
 
   <div id="siemens" class="container-fluid bg-grey">
     <div class="row">
